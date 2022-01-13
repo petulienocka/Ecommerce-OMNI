@@ -1,0 +1,79 @@
+@import '../../assets/style/main.scss';
+@use 'base';
+
+.library-card {
+    border-radius: 4px;
+    z-index: 9;
+    background: #f9f7f4;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+    transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+        0.3s box-shadow,
+        0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+    margin-top: 3rem;
+    border: none !important;
+    height: 250px;
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12),
+            0 4px 8px rgba(0, 0, 0, 0.06);
+    }
+}
+
+// .step-section {
+//     position: relative;
+//     z-index: -1;
+// }
+
+#step-bg {
+    max-height: 40vh;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    position: relative;
+}
+
+.step-border {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+
+    @media screen and (max-width: 750px) {
+        border-bottom: 1px solid black;
+        border-right: none;
+    }
+}
+
+.background {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    font-size: 9rem;
+    color: #e6e4e1;
+    text-align: center;
+    font-family: $omniThin;
+    max-height: auto;
+}
+.step-text {
+    padding: 2rem;
+
+    h1 {
+        font-size: 24px;
+        color: black;
+    }
+
+    p {
+        font-size: 16px;
+        margin-top: 5rem;
+        z-index: 9;
+    }
+}
+
+.step-last {
+    @media screen and (max-width: 550px) {
+        padding-bottom: 1.5rem;
+    }
+}

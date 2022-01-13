@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'BwGradual-Regular';
+    src: url('../../assets/fonts/BW\ Gradual-Regular.otf');
+}
+@font-face {
+    font-family: 'BwGradual-Light';
+    src: url('../../assets/fonts/BW\ Gradual-Light.otf');
+}
+
+@font-face {
+    font-family: 'BwGradual-Thin';
+    src: url('../../assets/fonts/BW\ Gradual-Thin.otf');
+}
+
+@font-face {
+    font-family: 'BwGradual-Bold';
+    src: url('../../assets/fonts/BW\ Gradual-Bold.otf');
+}
+
+@font-face {
+    font-family: 'FlechaM-Regular';
+    src: url('../../assets/fonts/FlechaM/FlechaLRegular.otf');
+}
+
+/*=== GENERAL STYLING ===*/
+
+// COLORS //
+
+$omniBlueColor: #003d57;
+$omniBeigeColor: #f2ede8;
+$lightBackgroundColor: #f7f5f2;
+$omniWhite: #fff;
+
+// FONTS //
+
+$omniBlack: 'formularblack', sans-serif;
+$omniRegular: 'BwGradual-Regular', sans-serif;
+$omniLight: 'BwGradual-Light', sans-serif;
+$omniThin: 'BwGradual-Thin', sans-serif;
+$omniBold: 'BwGradual-Bold', sans-serif;
+$omniMedium: 'formularmedium', sans-serif;
+$omniFlechaRegular: 'FlechaM-Regular', sans-serif;
+
+// TEXT SIZES INDEX //
+
+$omniHeader: 2.7vw;
+$omniParagraph: 1.3vw;
+$omniJumbotron: 3vw;

@@ -1,0 +1,324 @@
+@import './assets/style/main.scss';
+@use 'base';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $omniRegular;
+    // ::-webkit-scrollbar {
+    //     display: none;
+    //     -ms-overflow-style: none;
+    //     scrollbar-width: none;
+    // }
+
+    ::selection {
+        background: #cac7c1;
+        color: white;
+    }
+}
+
+h1 {
+    font-family: $omniRegular;
+}
+
+.text-box {
+    margin-bottom: 10%;
+
+    a {
+        color: $omniBlueColor;
+        text-decoration: underline;
+
+        &:hover {
+            font-weight: bold;
+        }
+    }
+}
+
+.wrapper {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#title-section {
+    border-top: 1px solid black;
+    // margin-bottom: 2rem;
+
+    @media screen and (max-width: 550px) {
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
+    h1 {
+        color: black;
+        font-size: 24px;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 2rem;
+
+        @media screen and (max-width: 550px) {
+            padding-bottom: 0;
+        }
+        @media screen and (max-width: 330px) {
+            font-size: 20px;
+        }
+    }
+}
+
+#logo-section {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 2rem;
+
+    @media screen and (max-width: 550px) {
+        padding: 0;
+    }
+    h1 {
+        color: black;
+        font-size: 24px;
+        @media screen and (max-width: 550px) {
+            padding-top: 2rem;
+            padding-left: 2rem;
+        }
+    }
+
+    .logos {
+        margin-top: 1rem;
+    }
+}
+
+#roi-section {
+    padding: 3rem 5rem;
+    background-image: url('https://theomnified-media.s3.eu-north-1.amazonaws.com/Images/Index/group-2%403x.png');
+    background-position: center;
+    background-size: cover;
+    border-top: 1px solid black;
+    @media screen and (max-width: 550px) {
+        padding: 2rem;
+    }
+
+    .button-col {
+        text-align: center;
+        position: relative;
+        bottom: 0;
+
+        @media screen and (max-width: 550px) {
+            text-align: center;
+        }
+    }
+
+    .roi-button {
+        padding: 0.5rem 1rem;
+        font-family: $omniRegular;
+
+        @media screen and (max-width: 550px) {
+            background: black;
+            color: white;
+            width: 100%;
+            margin-top: 2rem;
+            padding: 1rem;
+        }
+    }
+
+    p {
+        font-family: $omniRegular;
+        font-size: 24px;
+        @media screen and (max-width: 1050px) and (min-width: 551px) {
+            font-size: 17px;
+        }
+    }
+}
+
+#read-more-section {
+    background-image: linear-gradient(to left, black, #f9f7f4, white);
+
+    .read-more-text {
+        padding: 2rem;
+    }
+
+    h1 {
+        color: black;
+    }
+}
+
+.omni-button {
+    @include omniButton;
+}
+
+#calculator-section {
+    width: 75%;
+    text-align: center;
+    h1 {
+        color: black;
+        font-family: $omniBold;
+        font-size: 20px;
+    }
+
+    .calc-arrow {
+        position: absolute;
+        left: 50%;
+        top: 13rem;
+        transform: translate(-50%, -50%);
+    }
+    .calc-arrow span {
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-bottom: 5px solid #e6e4e1;
+        border-right: 5px solid #e6e4e1;
+        transform: rotate(45deg);
+        margin: -10px;
+        animation: animate 2s infinite;
+    }
+    .calc-arrow span:nth-child(2) {
+        animation-delay: -0.2s;
+    }
+    .calc-arrow span:nth-child(3) {
+        animation-delay: -0.4s;
+    }
+
+    @media screen and (max-width: 550px) {
+        #calculator-section {
+            width: 100%;
+            padding: 1rem;
+            text-align: left;
+        }
+
+        .calc-arrow {
+            top: 25rem;
+        }
+    }
+
+    @media screen and (max-width: 340px) {
+        .calc-arrow {
+            top: 27rem;
+        }
+    }
+
+    @keyframes animate {
+        0% {
+            opacity: 0;
+            transform: rotate(45deg) translate(-20px, -20px);
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            transform: rotate(45deg) translate(20px, 20px);
+        }
+    }
+}
+
+.selectedChair {
+    &:hover {
+        outline: 1px solid black;
+        outline-offset: 3px;
+    }
+    &:active {
+        outline: 1px solid black;
+        outline-offset: 3px;
+    }
+
+    &:focus {
+        outline: 1px solid black !important;
+        outline-offset: 3px !important;
+    }
+}
+
+.selectedDesk {
+    &:hover {
+        outline: 1px solid black;
+        outline-offset: 3px;
+    }
+    &:active {
+        outline: 1px solid black;
+        outline-offset: 3px;
+    }
+
+    &:focus {
+        outline: 1px solid black !important;
+        outline-offset: 3px !important;
+    }
+}
+
+.css-1pgnhl3 {
+    &:focus,
+    .css-1pgnhl3[data-focus] {
+        outline: 1px solid black;
+        outline-offset: 3px;
+        box-shadow: none !important;
+    }
+}
+
+.by-omni {
+    border-right: 1px solid black;
+    padding: 1rem;
+
+    @media screen and (max-width: 750px) {
+        display: none;
+    }
+}
+
+#title-section {
+    @media screen and (max-width: 550px) {
+        margin-top: 0;
+    }
+    h1 {
+        color: black;
+        font-size: 24px;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 2rem;
+
+        @media screen and (max-width: 550px) {
+            padding-bottom: 0;
+        }
+        @media screen and (max-width: 330px) {
+            font-size: 20px;
+        }
+    }
+}
+
+input,
+textarea {
+    border: 1px solid black;
+}
+
+input[type='text'],
+[type='email'],
+[type='number'],
+textarea {
+    width: 100%;
+    padding: 5px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.confirm-order {
+    background-color: black;
+    color: white;
+    padding: 3rem;
+}
+
+.info-options {
+    height: 100vh;
+}
+
+.Toastify__toast--dark {
+    background-color: white !important;
+    border: 1px solid black !important;
+    color: black !important;
+}
+
+.Toastify__progress-bar--dark {
+    background-color: #e6e4e1 !important;
+}
+
+.Toastify__close-button {
+    color: black !important;
+}

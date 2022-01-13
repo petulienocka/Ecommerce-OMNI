@@ -1,0 +1,252 @@
+@import '../../assets/style/main.scss';
+@use 'base';
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 0 5vw;
+    height: 80px;
+    border-bottom: 1px solid black;
+    font-size: $omniRegular;
+    z-index: 2;
+}
+
+.navbar {
+    background-color: transparent;
+}
+
+@media screen and (min-width: 1100px) {
+    .globe-icon {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        margin: auto;
+        font-size: 20px;
+    }
+}
+
+.logo {
+    @media screen and (max-width: 550px) {
+        text-align: center;
+    }
+}
+
+.nav-menu {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    max-width: 550px; //850px
+    text-align: center;
+    width: 100%;
+
+    @media screen and (max-width: 550px) {
+    }
+    // margin: auto;
+    @media screen and (max-width: 550px) {
+        text-align: right;
+    }
+}
+
+.nav-menu li {
+    float: none;
+    display: flex;
+    list-style: none;
+    color: black;
+    // text-transform: uppercase;
+    cursor: pointer;
+    margin: 0.7rem;
+
+    &:hover,
+    &:active {
+        text-decoration: underline;
+    }
+}
+@media screen and (min-width: 1100px) {
+    .links {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 10;
+        // right: 10vw;
+
+        &:hover {
+            a {
+                color: black;
+                text-decoration: none !important;
+            }
+        }
+    }
+    .bottom-links {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        &:hover {
+            a {
+                color: black;
+                text-decoration: none !important;
+            }
+        }
+    }
+}
+
+// @media screen and (max-width: 750px) {
+//     .links {
+//         display: none;
+//     }
+// }
+
+.bottom-links {
+    @media screen and (max-width: 1100px) {
+        border-top: 1px solid black;
+    }
+}
+
+.bottom-links__language {
+    display: none;
+
+    @media screen and (max-width: 1100px) {
+        display: inline-block;
+        padding: 0rem 0.7rem;
+    }
+}
+
+.burger div {
+    background-color: black;
+    margin: 4px;
+    height: 2px;
+}
+
+.burger {
+    display: none;
+}
+
+@media screen and (max-width: 1100px) {
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .globe-icon {
+        display: none;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 80px;
+        right: 0px;
+        bottom: 0;
+        width: 35vw;
+        height: calc(100vh - 80px);
+        background-color: white;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        transform: translateX(100%);
+        font-size: 12px;
+
+        @media screen and (max-width: 550px) {
+            width: 40vw;
+        }
+    }
+    .nav-menu.open {
+        transform: translateX(0);
+        transition: 0.4s ease-in-out;
+    }
+    .nav-menu li {
+        margin: 2vh 5vw;
+        transform: translateX(20px);
+        opacity: 0;
+        float: right;
+
+        a {
+            &:hover {
+                text-decoration: none !important;
+                color: black !important;
+            }
+        }
+    }
+
+    .top-line {
+        width: 25px;
+    }
+    .middle-line {
+        width: 15px;
+    }
+    .bottom-line {
+        width: 25px;
+    }
+
+    .burger.active div {
+        transition: 0.3s ease-in-out 0.3s;
+    }
+    .burger.active .top-line {
+        transform: rotate(45deg) translate(4px, 6px);
+    }
+    .burger.active .bottom-line {
+        transform: rotate(-45deg) translate(4px, -6px);
+    }
+    .burger.active .middle-line {
+        opacity: 0;
+        transform: translateX(10px);
+        transition: 0.3s ease-in-out;
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateX(20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}
+
+.rc-dropdown-menu > .rc-dropdown-menu-item:hover,
+.rc-dropdown-menu > .rc-dropdown-menu-item-active,
+.rc-dropdown-menu > .rc-dropdown-menu-item-selected {
+    background-color: #f9f7f4 !important;
+}
+.rc-dropdown-menu > .rc-dropdown-menu-item-selected {
+    position: relative;
+}
+.rc-dropdown-menu > .rc-dropdown-menu-item-selected:after {
+    content: '';
+    font-family: 'anticon' !important;
+    position: absolute;
+    color: transparent !important;
+}
+.rc-dropdown-menu > .rc-dropdown-menu-item-disabled {
+    color: #ccc;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+.rc-dropdown-menu > .rc-dropdown-menu-item-disabled:hover {
+    color: #ccc;
+    background-color: #fff;
+    cursor: not-allowed;
+}
+.rc-dropdown-menu > .rc-dropdown-menu-item:last-child {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.rc-dropdown-menu > .rc-dropdown-menu-item:first-child {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.rc-dropdown-menu > .rc-dropdown-menu-item-divider {
+    height: 1px;
+    margin: 1px 0;
+    overflow: hidden;
+    background-color: #e5e5e5;
+    line-height: 0;
+}

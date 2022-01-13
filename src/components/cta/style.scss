@@ -1,0 +1,72 @@
+@import '../../assets/style/main.scss';
+@use 'base';
+
+@media screen and (max-width: 550px) {
+    .css-1ttgn56 {
+        padding-top: 0 !important;
+    }
+    .css-973brg {
+        width: 100% !important;
+        height: 200px !important;
+    }
+
+    .container,
+    .container-fluid,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .css-f3m8sz {
+        align-items: left !important;
+        justify-content: left !important;
+        padding-top: 2rem !important;
+    }
+
+    .css-1ttgn56 {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .css-mim5c5 {
+        padding-top: 0 !important;
+        padding-bottom: 1rem !important;
+    }
+
+    .css-1qtvm2r {
+        object-position: bottom !important ;
+    }
+}
+
+/* scrolling transition */
+
+.cta-container {
+    display: flex;
+    justify-content: space-between;
+    /* position: sticky;
+    top: 0; */
+    width: 100%;
+}
+.cta-container .left {
+    position: sticky;
+    z-index: 1;
+    // background: white;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.cta-container img {
+    transition: 3s ease-in;
+}
+.cta-container > div {
+    height: 100%;
+}
+.cta-container .in-in-middle {
+    height: 80vh;
+}

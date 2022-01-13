@@ -1,0 +1,221 @@
+@import './base';
+
+body {
+    font-family: $omniLight;
+}
+
+// BUTTONS //
+
+@mixin omniButton {
+    background-color: transparent;
+    font-family: $omniLight;
+    text-transform: uppercase;
+    color: black;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+// @mixin omniButton {
+//     display: flex;
+//     margin-top: 3rem;
+//     justify-content: center;
+//     align-items: center;
+//     color: $omniBlueColor;
+//     border: 1px solid $omniBlueColor;
+//     font-family: $omniRegular;
+//     font-size: 10px;
+//     letter-spacing: 4px;
+//     padding: 0rem 1rem 0rem 1rem;
+//     min-width: 12rem;
+//     max-width: 14rem;
+//     min-height: 2.5rem;
+//     background-color: transparent;
+
+//     @include tablet {
+//         margin-top: 1.5rem;
+//         letter-spacing: 2px;
+//         min-width: 9rem;
+//         max-width: 12rem;
+//         min-height: 2.5rem;
+//     }
+
+//     &:hover {
+//         background-color: $omniBlueColor;
+//         color: white;
+//         border: none !important;
+//     }
+
+//     &:focus {
+//         outline: none !important;
+//         box-shadow: none;
+//         background-color: $omniBlueColor;
+//         color: white;
+//     }
+
+//     &:active {
+//         outline: none !important;
+//         box-shadow: none !important;
+//         background-color: $omniBlueColor !important;
+//         color: white;
+//         border: none !important;
+//     }
+// }
+
+@mixin omniWhiteButton {
+    display: flex;
+    margin-top: 3rem;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: 1px solid white;
+    font-family: $omniRegular;
+    font-size: 10px;
+    letter-spacing: 4px;
+    padding: 0rem 1rem 0rem 1rem;
+    min-width: 12rem;
+    max-width: 14rem;
+    min-height: 2.5rem;
+    background-color: transparent;
+
+    @include tablet {
+        margin-top: 1.5rem;
+        letter-spacing: 2px;
+        min-width: 9rem;
+        max-width: 12rem;
+        min-height: 2.5rem;
+    }
+
+    &:hover {
+        background-color: white;
+        color: $omniBlueColor;
+        border: none !important;
+    }
+
+    &:focus {
+        outline: none !important;
+        box-shadow: none;
+        background-color: white;
+        color: $omniBlueColor;
+    }
+
+    &:active {
+        outline: none !important;
+        box-shadow: none !important;
+        background-color: white !important;
+        color: $omniBlueColor !important;
+        border: none !important;
+    }
+}
+
+@mixin omniActionButton {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: $omniBlueColor;
+    border: 1px solid $omniBlueColor;
+    font-family: $omniRegular;
+    padding-top: 0.75rem;
+    font-size: 10px;
+    letter-spacing: 4px;
+    min-width: 12rem;
+    max-width: 14rem;
+    min-height: 2.5rem;
+    background-color: transparent;
+
+    &:hover {
+        background-color: $omniBlueColor;
+        color: white;
+        border: none !important;
+    }
+
+    &:focus {
+        background-color: $omniBlueColor;
+        color: white;
+        border: none !important;
+    }
+
+    &:active {
+        outline: none !important;
+        box-shadow: none !important;
+        background-color: $omniBlueColor !important;
+        color: white;
+        border: none !important;
+    }
+}
+
+@mixin omniTitle {
+    font-size: $omniHeader;
+    font-family: $omniBold;
+    color: $omniBlueColor;
+}
+
+@mixin omniParagraph {
+    font-size: $omniParagraph;
+    font-family: $omniLight;
+    color: $omniBlueColor;
+}
+
+@mixin omniSecondaryTitle {
+    color: black;
+    font-size: 3vw;
+    font-family: $omniRegular;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+@mixin tablet {
+    @media screen and (min-width: 750px) and (max-width: 1250px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (min-width: 250px) and (max-width: 750px) {
+        @content;
+    }
+}
+
+@mixin fade-right-animation {
+    -webkit-animation: slide-right 1.5s linear both;
+    animation: slide-right 1.5s linear both;
+
+    @keyframes slide-right {
+        from {
+            -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+        }
+        to {
+            -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+        }
+    }
+}
+
+@mixin fade-left-animation {
+    -webkit-animation: slide-left 1.5s linear both;
+    animation: slide-left 1.5s linear both;
+
+    @keyframes slide-left {
+        from {
+            -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+        }
+        to {
+            -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+        }
+    }
+}
+.btn.focus,
+.btn:focus {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    color: black;
+    background-color: transparent;
+}

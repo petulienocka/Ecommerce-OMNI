@@ -1,0 +1,65 @@
+@import '../../assets/style/main.scss';
+@use 'base';
+
+.main-text {
+    font-family: $omniBold;
+}
+
+// .animation {
+//     @include fade-left-animation;
+// }
+
+.contactFormBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $omniBlueColor;
+    border: 1px solid $omniBlueColor;
+    font-family: 'formularregular', sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    padding: 0rem 1rem 0rem 1rem;
+    max-width: 10rem;
+    min-height: 2rem;
+    background-color: transparent;
+
+    &:hover {
+        background-color: $omniBlueColor;
+        color: white;
+        border-color: unset;
+    }
+
+    &:focus {
+        background-color: $omniBlueColor;
+        color: white;
+        border-color: unset;
+        box-shadow: unset;
+    }
+
+    &:active {
+        outline: none !important;
+        box-shadow: none !important;
+        border-color: unset !important;
+        background-color: $omniBlueColor !important;
+        color: white;
+    }
+}
+
+.collapse-btn {
+    &:hover {
+        outline: none !important;
+        box-shadow: none;
+    }
+
+    &:focus {
+        outline: none !important;
+        box-shadow: none;
+    }
+}
+
+h2 {
+    @media only screen and (max-width: 800px) and (min-width: 550px) {
+        padding-left: 3rem;
+        padding-top: 1rem;
+    }
+}

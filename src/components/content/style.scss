@@ -1,0 +1,239 @@
+@import '../../assets/style/main.scss';
+@use 'base';
+
+#content-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    color: black;
+    width: 100%;
+    height: auto;
+
+    h1 {
+        font-size: 16px;
+        color: black;
+        text-transform: uppercase;
+        margin-top: 2rem;
+    }
+    p {
+        font-size: 18px;
+        margin-top: 2rem;
+        font-family: $omniLight;
+    }
+    .omni-button {
+        @include omniButton;
+    }
+}
+.inline {
+    position: absolute;
+    bottom: 0;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+
+    @media screen and (max-width: 550px) {
+        position: unset;
+        padding-bottom: 1rem;
+    }
+}
+.step1 {
+    background-image: url('https://theomnified-media.s3.eu-north-1.amazonaws.com/Images/Index/content1.png');
+    background-position: center;
+    background-size: cover;
+    padding: 1rem;
+    position: relative;
+    min-height: 270px;
+
+    @media screen and (max-width: 1050px) {
+        height: 350px;
+    }
+    @media screen and (max-width: 900px) {
+        height: 400px;
+    }
+    @media screen and (max-width: 550px) {
+        background-position: center center;
+        position: unset;
+        text-align: left;
+        // margin-top: 5rem;
+    }
+
+    h1 {
+        @media screen and (max-width: 550px) {
+            padding-bottom: 1rem;
+            color: black;
+            font-family: $omniRegular;
+            text-transform: uppercase;
+            font-size: 12px;
+            margin-top: 1rem;
+        }
+    }
+
+    p {
+        font-family: $omniLight;
+        font-size: 18px;
+
+        @media screen and (max-width: 550px) {
+            font-size: 22px;
+            margin-top: 1rem;
+        }
+        @media screen and (max-width: 330px) {
+            font-size: 22px;
+        }
+    }
+
+    .omni-button {
+        @media screen and (max-width: 550px) {
+            // padding-top: 2rem;
+        }
+    }
+}
+.step2 {
+    background-image: url('https://theomnified-media.s3.eu-north-1.amazonaws.com/Images/Index/content2.png');
+    background-position: center;
+    background-size: cover;
+    padding: 1rem;
+    position: relative;
+    min-height: 270px;
+
+    @media screen and (max-width: 1050px) {
+        height: 350px;
+    }
+    @media screen and (max-width: 900px) {
+        height: 400px;
+    }
+    @media screen and (max-width: 550px) {
+        position: unset;
+        text-align: left;
+        // margin-top: 5rem;
+    }
+    h1 {
+        @media screen and (max-width: 550px) {
+            padding-bottom: 1rem;
+            color: black;
+            font-family: $omniRegular;
+            text-transform: uppercase;
+            font-size: 12px;
+            margin-top: 1rem;
+        }
+    }
+    p {
+        font-family: $omniLight;
+        font-size: 18px;
+        @media screen and (max-width: 550px) {
+            font-size: 22px;
+            margin-top: 1rem;
+        }
+        @media screen and (max-width: 330px) {
+            font-size: 22px;
+        }
+    }
+
+    .omni-button {
+        @media screen and (max-width: 550px) {
+            // padding-top: 2rem;
+        }
+    }
+}
+.step3 {
+    background-image: url('https://theomnified-media.s3.eu-north-1.amazonaws.com/Images/Index/content3.svg');
+    background-position: center;
+    background-size: cover;
+    padding: 1rem;
+    position: relative;
+    min-height: 270px;
+
+    @media screen and (max-width: 1050px) {
+        height: 350px;
+    }
+    @media screen and (max-width: 900px) {
+        height: 400px;
+    }
+    @media screen and (max-width: 550px) {
+        background-position: bottom center;
+        position: unset;
+        text-align: left;
+        // margin-top: 5rem;
+    }
+    h1 {
+        @media screen and (max-width: 550px) {
+            padding-bottom: 1rem;
+            color: black;
+            font-family: $omniRegular;
+            text-transform: uppercase;
+            font-size: 12px;
+            margin-top: 1rem;
+        }
+    }
+
+    p {
+        font-family: $omniLight;
+        font-size: 18px;
+        @media screen and (max-width: 550px) {
+            font-size: 22px;
+            margin-top: 1rem;
+        }
+        @media screen and (max-width: 330px) {
+            font-size: 22px;
+        }
+    }
+
+    .omni-button {
+        @media screen and (max-width: 550px) {
+            // padding-top: 2rem;
+        }
+    }
+}
+.step4 {
+    background-image: url('https://theomnified-media.s3.eu-north-1.amazonaws.com/Images/Index/content4.png');
+    background-position: center;
+    background-size: cover;
+    padding: 1rem;
+    position: relative;
+    min-height: 270px;
+
+    @media screen and (max-width: 1050px) {
+        height: 350px;
+    }
+    @media screen and (max-width: 900px) {
+        height: 400px;
+    }
+    @media screen and (max-width: 550px) {
+        position: unset;
+        text-align: left;
+        // margin-top: 5rem;
+    }
+    h1 {
+        @media screen and (max-width: 550px) {
+            padding-bottom: 1rem;
+            color: black;
+            font-family: $omniRegular;
+            text-transform: uppercase;
+            font-size: 12px;
+            margin-top: 1rem;
+        }
+    }
+
+    p {
+        font-family: $omniLight;
+        font-size: 18px;
+        @media screen and (max-width: 550px) {
+            font-size: 22px;
+            margin-top: 1rem;
+        }
+        @media screen and (max-width: 330px) {
+            font-size: 21px;
+        }
+    }
+
+    .omni-button {
+        @media screen and (max-width: 550px) {
+            // padding-top: 2rem;
+        }
+    }
+}
+
+.content-text {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
+// MOBILE VERSION

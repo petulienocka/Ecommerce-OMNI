@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            property="og:image"
+            content="https://theomnified-media.s3.eu-north-1.amazonaws.com/Products/Luxe.jpg"
+        />
+
+                <meta property="og:title" content="First 100 for 6000kr"></meta>
+                <meta
+                    property="og:description"
+                    content="To support employees, working from home in Denmark, OMNI will split the cost with you on the first 100 Deluxe Desks (reg. price 12.000kr)! Pay now and we go into production when we reach 100 orders. Share this exclusive deal with family and friends!"
+                ></meta>
+                <meta
+                    property="og:url"
+                    content="https://www.theomnified.com/100familyfriends"
+                ></meta>
+        <link
+            rel="icon"
+            href="https://theomnified-media.s3.eu-north-1.amazonaws.com/Images/Common/omni-favicon.png"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <link
+            rel="icon"
+            href="https://theomnified-media.s3.eu-north-1.amazonaws.com/Images/Common/omni-favicon.png"
+        />
+        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+        <script
+            type="module"
+            src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+        ></script>
+
+        <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    --></head>
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root"></div>
+        <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+            <input type="text" name="name" />
+            <input type="email" name="email" />
+            <input type="number" name="phone" />
+            <input type="text" name="company" />
+            <textarea name="message"></textarea>
+            <textarea hidden name="omni"></textarea>
+        </form>
+        <form
+            name="elevation-design-desk"
+            netlify
+            netlify-honeypot="bot-field"
+            hidden
+        >
+            <input type="text" name="name" />
+            <input type="email" name="email" />
+            <input type="number" name="phone" />
+            <!-- <input type="text" name="company" /> -->
+        </form>
+
+        <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+        <script type="text/javascript">
+            var cpm = {};
+            (function (h, u, b) {
+                var d = h.getElementsByTagName('script')[0],
+                    e = h.createElement('script');
+                e.async = true;
+                e.src = 'https://cookiehub.net/c2/79af7ca7.js';
+                e.onload = function () {
+                    u.cookiehub.load(b);
+                };
+                d.parentNode.insertBefore(e, d);
+            })(document, window, cpm);
+        </script>
+
+        <!--
+        <script type="text/javascript">
+            var cpm = {};
+            (function (h, u, b) {
+                var d = h.getElementsByTagName('script')[0],
+                    e = h.createElement('script');
+                e.async = true;
+                e.src = 'https://dash.cookiehub.com/dev/79af7ca7.js';
+                e.onload = function () {
+                    u.cookiehub.load(b);
+                };
+                d.parentNode.insertBefore(e, d);
+            })(document, window, cpm);
+        </script>
+        -->
+    </body>
+</html>

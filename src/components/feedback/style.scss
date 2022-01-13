@@ -1,0 +1,117 @@
+@import '../../assets/style/main.scss';
+@use 'base';
+
+#content-section {
+}
+
+#feedback {
+}
+
+.carousel-control-next-icon:after {
+    content: url('https://theomnified-media.s3.eu-north-1.amazonaws.com/Images/SVGs/left.svg');
+    position: absolute;
+    top: 2vh;
+
+    @media screen and (max-width: 550px) {
+        content: '';
+    }
+}
+
+.carousel-control-prev-icon:after {
+    content: url('https://theomnified-media.s3.eu-north-1.amazonaws.com/Images/SVGs/right.svg');
+    position: absolute;
+    top: 2vh;
+
+    @media screen and (max-width: 550px) {
+        content: '';
+    }
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    background: transparent;
+    height: 0;
+    width: 0;
+}
+
+.carousel {
+    @media screen and (max-width: 550px) {
+        text-align: left;
+        justify-content: left;
+    }
+}
+
+.carousel-item {
+    background-color: #e6e4e1;
+    height: 400px;
+
+    @media screen and (max-width: 550px) {
+        height: 450px;
+    }
+}
+
+.carousel-caption {
+    position: absolute;
+    padding: 1rem;
+    margin: 2rem;
+    z-index: 1;
+
+    @media screen and (max-width: 550px) {
+        font-size: 24px;
+        text-align: left !important;
+        margin: 0;
+        left: 0 !important;
+        bottom: 55px !important;
+    }
+    h6 {
+        font-family: $omniFlechaRegular;
+        color: black;
+        font-size: 2.3vw;
+
+        @media screen and (max-width: 1250px) {
+            font-size: 2.5vw;
+        }
+
+        @media screen and (max-width: 950px) {
+            font-size: 3vw;
+        }
+        @media screen and (max-width: 750px) {
+            font-size: 3.5vw;
+        }
+
+        @media screen and (max-width: 550px) {
+            font-size: 6vw;
+        }
+    }
+    p {
+        font-family: $omniRegular;
+        color: black;
+        font-size: 1vw;
+        @media screen and (max-width: 550px) {
+            font-size: 16px;
+        }
+    }
+}
+.carousel-indicators {
+    z-index: 1;
+    @media screen and (max-width: 550px) {
+        text-align: left !important;
+        justify-content: left !important;
+        margin-left: 1rem;
+        z-index: 2;
+    }
+}
+
+.carousel-indicators li {
+    background-color: grey;
+    height: 1px;
+    width: 5%;
+    margin-bottom: 1rem;
+
+    @media screen and (max-width: 550px) {
+        width: 10%;
+    }
+}
+
+.carousel-indicators .active {
+    background-color: black;
+}

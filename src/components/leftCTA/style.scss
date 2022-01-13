@@ -1,0 +1,61 @@
+.container-cta {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    // background-color: linear;
+}
+
+.box-cta {
+    flex: 1;
+    overflow: hidden;
+    transition: 0.5s;
+    margin: 0 0%;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    line-height: 0;
+    cursor: pointer;
+
+    img {
+        width: 100%;
+        height: calc(100% - 10vh);
+        object-fit: cover;
+        transition: 0.5s;
+    }
+}
+
+.coverflow__container__1P-xE {
+    background: transparent !important;
+}
+
+.coverflow__figure__3bk_C {
+    box-shadow: 0 50px 70px rgba(253, 252, 250, 0) !important;
+    -webkit-box-reflect: unset !important;
+}
+
+@media only screen and (max-width: 550px) {
+    .coverflow__stage__14oqC {
+        height: auto;
+    }
+
+    .css-b6ce5l {
+        height: 100px !important;
+        margin-bottom: 3rem;
+    }
+}
+
+.coverflow__text__39hqd {
+    font-size: 8px !important;
+}
+
+.coverflow__figure__3bk_C {
+    width: 200px !important;
+}
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    color: black;
+}
+
+// .carousel-item img {
+//     object-fit: cover;
+//     object-position: center;
+// }

@@ -1,0 +1,89 @@
+@import '../../assets/style/main.scss';
+@use 'base';
+
+.card {
+    border: none !important;
+}
+
+.card-header {
+    background-color: transparent;
+}
+
+.btn.focus,
+.btn:focus {
+    outline: none !important;
+    border: none !important;
+    box-shadow: transparent !important;
+    text-decoration: none !important;
+}
+
+.btn-link {
+    display: flex;
+
+    &:hover {
+        text-decoration: none;
+        color: black;
+        outline: none;
+
+        &:active {
+            color: black;
+        }
+    }
+}
+
+.btn-link h3 {
+    color: black;
+    font-family: $omniRegular;
+    font-size: 17px;
+    display: inline-block;
+
+    @media (max-width: 750px) {
+        font-size: 12px;
+    }
+
+    @media (max-width: 500px) {
+        font-size: 10px;
+    }
+
+    @media (max-width: 367px) {
+        font-size: 9px;
+    }
+
+    &:hover {
+        color: black;
+    }
+
+    &:focus {
+        outline: none !important;
+        border: none !important;
+        box-: transparent !important;
+    }
+}
+
+.question-container {
+    padding-left: 10%;
+    padding-right: 10%;
+
+    @media (max-width: 750px) {
+        padding-left: 0%;
+    }
+
+    @media (max-width: 500px) {
+        padding-right: 0%;
+    }
+
+    p {
+        color: black;
+        font-family: $omniLight;
+        font-size: 15px;
+
+        @media (max-width: 750px) {
+            font-size: 12px;
+        }
+    }
+
+    .card-header {
+        border-bottom: 0;
+        padding: 0.75rem 0 0 0;
+    }
+}

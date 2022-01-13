@@ -1,0 +1,111 @@
+.calculator-col {
+    border: 1px solid black;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+
+    h2 {
+        padding-bottom: 2rem;
+        color: black;
+    }
+
+    h6 {
+        padding-top: 2rem;
+    }
+}
+
+.roi {
+    background-color: #f9f7f4;
+    border: 1px solid black;
+    padding: 1rem;
+
+    h3 {
+        color: black;
+    }
+}
+
+.calculator-title {
+    background-color: #f9f7f4;
+    border: 1px solid black;
+    padding: 1rem;
+    text-align: center;
+
+    h1 {
+        font-size: 20px;
+        font-weight: bold;
+        color: black;
+    }
+}
+.calculator {
+    padding-bottom: 5rem;
+}
+
+.calc-inputs {
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+.investment {
+    border: 1px solid black;
+    padding: 1rem;
+
+    h2 {
+        color: black;
+    }
+}
+
+// OVERLAY //
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: #f9f7f4;
+}
+
+.calculator-col:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: black;
+    font-size: 15px;
+    position: absolute;
+    width: 80%;
+    top: 30%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.button {
+    color: black;
+    font-size: 20px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.calculator {
+    display: grid;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.items {
+    svg {
+        display: inline-grid;
+    }
+}

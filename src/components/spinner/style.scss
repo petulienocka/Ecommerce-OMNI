@@ -1,0 +1,43 @@
+.container-favicon {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+.favicon-image {
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+    animation: anim__rotate 8.2s linear infinite;
+    &__spoke {
+        position: absolute;
+        border: 0.45rem solid;
+        height: 4rem;
+        width: 11rem;
+        border-radius: 250%;
+
+        &--1 {
+            transform: rotate(60deg);
+        }
+        &--2 {
+            transform: rotate(-60deg);
+        }
+        &--3 {
+            height: 2.2rem;
+            width: 2.2rem;
+            border-radius: 50%;
+            position: absolute;
+        }
+    }
+}
+@keyframes anim__rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

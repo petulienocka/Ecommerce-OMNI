@@ -1,0 +1,415 @@
+@import '../assets/style/main.scss';
+@use 'base';
+
+// body {
+//     @media screen and (min-width: 1600px) {
+//         width: 80%;
+//         justify-content: center;
+//         align-content: center;
+//     }
+// }
+
+.wrapper {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#title-section {
+    border-top: 1px solid black;
+    // margin-bottom: 2rem;
+
+    @media screen and (max-width: 550px) {
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
+    h1 {
+        color: black;
+        font-size: 24px;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 2rem;
+
+        @media screen and (max-width: 550px) {
+            padding-bottom: 0;
+        }
+        @media screen and (max-width: 330px) {
+            font-size: 20px;
+        }
+    }
+}
+
+#logo-section {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 2rem;
+
+    @media screen and (max-width: 550px) {
+        padding: 0;
+    }
+    h1 {
+        color: black;
+        font-size: 24px;
+        @media screen and (max-width: 550px) {
+            padding-top: 2rem;
+            padding-left: 2rem;
+        }
+    }
+
+    .logos {
+        margin-top: 1rem;
+    }
+}
+
+#roi-section {
+    padding: 3rem 5rem;
+    background-image: url('https://theomnified-media.s3.eu-north-1.amazonaws.com/Images/Index/group-2%403x.png');
+    background-position: center;
+    background-size: cover;
+    border-top: 1px solid black;
+    @media screen and (max-width: 550px) {
+        padding: 2rem;
+    }
+
+    .button-col {
+        text-align: center;
+        position: relative;
+        bottom: 0;
+
+        @media screen and (max-width: 550px) {
+            text-align: center;
+        }
+    }
+
+    .roi-button {
+        padding: 0.5rem 1rem;
+        font-family: $omniRegular;
+
+        @media screen and (max-width: 550px) {
+            background: black;
+            color: white;
+            width: 100%;
+            margin-top: 2rem;
+            padding: 1rem;
+        }
+    }
+
+    p {
+        font-family: $omniRegular;
+        font-size: 24px;
+        @media screen and (max-width: 1050px) and (min-width: 551px) {
+            font-size: 17px;
+        }
+    }
+}
+
+#read-more-section {
+    background-image: linear-gradient(to left, black, #f9f7f4, white);
+
+    .read-more-text {
+        padding: 2rem;
+    }
+
+    h1 {
+        color: black;
+    }
+}
+
+.omni-button {
+    @include omniButton;
+}
+
+@media screen and (min-width: 551px) {
+    @mixin button($bcolor, $url, $x1, $y1, $bor, $col) {
+        background: $bcolor;
+        -webkit-mask: url($url);
+        mask: url($url);
+        -webkit-mask-size: $x1 $y1;
+        mask-size: $x1 $y1;
+        border: $bor;
+        color: $col;
+    }
+
+    .button-container-1 {
+        position: absolute;
+        bottom: 0;
+        right: 15rem;
+        height: 50px;
+        margin-top: 7vh;
+        overflow: hidden;
+        border: 1px solid #000;
+        font-family: $omniRegular;
+        transition: 0.5s;
+        letter-spacing: 1px;
+
+        @media screen and (max-width: 1100px) {
+            right: 10rem;
+        }
+
+        @media screen and (max-width: 850px) {
+            right: 5rem;
+        }
+
+        @media screen and (max-width: 750px) {
+            right: 0rem;
+        }
+
+        button {
+            height: 100%;
+            font-family: $omniRegular;
+            font-size: 13px;
+            letter-spacing: 1px;
+            padding: 1rem;
+
+            @include button(
+                #000,
+                'https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png',
+                3000%,
+                100%,
+                none,
+                #fff
+            );
+            cursor: pointer;
+            -webkit-animation: ani2 0.7s steps(29) forwards;
+            animation: ani2 0.7s steps(29) forwards;
+
+            &:hover {
+                -webkit-animation: ani 0.7s steps(29) forwards;
+                animation: ani 0.7s steps(29) forwards;
+            }
+        }
+    }
+
+    .mas {
+        color: #000;
+        text-align: center;
+        font-family: $omniRegular;
+        position: absolute;
+        font-size: 13px;
+        margin-top: 0;
+        overflow: hidden;
+        padding: 1rem;
+    }
+
+    @-webkit-keyframes ani {
+        from {
+            -webkit-mask-position: 0 0;
+            mask-position: 0 0;
+        }
+
+        to {
+            -webkit-mask-position: 100% 0;
+            mask-position: 100% 0;
+        }
+    }
+
+    @keyframes ani {
+        from {
+            -webkit-mask-position: 0 0;
+            mask-position: 0 0;
+        }
+
+        to {
+            -webkit-mask-position: 100% 0;
+            mask-position: 100% 0;
+        }
+    }
+
+    @-webkit-keyframes ani2 {
+        from {
+            -webkit-mask-position: 100% 0;
+            mask-position: 100% 0;
+        }
+
+        to {
+            -webkit-mask-position: 0 0;
+            mask-position: 0 0;
+        }
+    }
+
+    @keyframes ani2 {
+        from {
+            -webkit-mask-position: 100% 0;
+            mask-position: 100% 0;
+        }
+
+        to {
+            -webkit-mask-position: 0 0;
+            mask-position: 0 0;
+        }
+    }
+
+    .roi-button {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .button-container-1 {
+        display: none;
+    }
+}
+
+#calculator-section {
+    width: 75%;
+    text-align: center;
+    h1 {
+        color: black;
+        font-family: $omniBold;
+        font-size: 20px;
+    }
+
+    .calc-arrow {
+        position: absolute;
+        left: 50%;
+        top: 13rem;
+        transform: translate(-50%, -50%);
+    }
+    .calc-arrow span {
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-bottom: 5px solid #e6e4e1;
+        border-right: 5px solid #e6e4e1;
+        transform: rotate(45deg);
+        margin: -10px;
+        animation: animate 2s infinite;
+    }
+    .calc-arrow span:nth-child(2) {
+        animation-delay: -0.2s;
+    }
+    .calc-arrow span:nth-child(3) {
+        animation-delay: -0.4s;
+    }
+
+    @media screen and (max-width: 550px) {
+        #calculator-section {
+            width: 100%;
+            padding: 1rem;
+            text-align: left;
+        }
+
+        .calc-arrow {
+            top: 25rem;
+        }
+    }
+
+    @media screen and (max-width: 340px) {
+        .calc-arrow {
+            top: 27rem;
+        }
+    }
+
+    @keyframes animate {
+        0% {
+            opacity: 0;
+            transform: rotate(45deg) translate(-20px, -20px);
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            transform: rotate(45deg) translate(20px, 20px);
+        }
+    }
+}
+
+.selectedChair {
+    &:hover {
+        outline: 1px solid black;
+        outline-offset: 3px;
+    }
+    &:active {
+        outline: 1px solid black;
+        outline-offset: 3px;
+    }
+
+    &:focus {
+        outline: 1px solid black !important;
+        outline-offset: 3px !important;
+    }
+}
+
+.selectedDesk {
+    &:hover {
+        outline: 1px solid black;
+        outline-offset: 3px;
+    }
+    &:active {
+        outline: 1px solid black;
+        outline-offset: 3px;
+    }
+
+    &:focus {
+        outline: 1px solid black !important;
+        outline-offset: 3px !important;
+    }
+}
+
+.css-1pgnhl3 {
+    &:focus,
+    .css-1pgnhl3[data-focus] {
+        outline: 1px solid black;
+        outline-offset: 3px;
+        box-shadow: none !important;
+    }
+}
+
+.by-omni {
+    border-right: 1px solid black;
+    padding: 1rem;
+
+    @media screen and (max-width: 750px) {
+        display: none;
+    }
+}
+
+#title-section {
+    @media screen and (max-width: 550px) {
+        margin-top: 0;
+    }
+    h1 {
+        color: black;
+        font-size: 24px;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 2rem;
+
+        @media screen and (max-width: 550px) {
+            padding-bottom: 0;
+        }
+        @media screen and (max-width: 330px) {
+            font-size: 20px;
+        }
+    }
+}
+
+input,
+textarea {
+    border: 1px solid black;
+}
+
+input[type='text'],
+[type='email'],
+[type='number'],
+textarea {
+    width: 100%;
+    padding: 5px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.confirm-order {
+    background-color: black;
+    color: white;
+    padding: 3rem;
+}
+
+.info-options {
+    height: 100vh;
+}
